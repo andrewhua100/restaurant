@@ -1,0 +1,130 @@
+<DOCTYPE HTML>
+
+<html>
+	<head>
+		<style>
+			background-color: #dda15e;
+			img {
+				height: 200px; 
+			}
+			h1, h2, h3, h4, h5, h6 {
+				text-align: center;
+			}
+			#pizza-container{
+				display:flex;
+				justify-content: space-evenly;
+			}
+			#pasta-container{
+				display:flex;
+				justify-content: space-evenly;
+			}
+	        .card {
+	        	/*top, right, bottom, left, color*/
+	        	box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+	            border-radius: 25px;
+	            width: 350px;
+	            padding-bottom: 20px;
+
+	            background-color: #ffffff;
+	        }
+	    	.card-image {
+	        	width: 100%;
+	            /*top-left, top-right, bottom-right, bottom-left*/
+	            border-radius: 25px 25px 0 0;
+	            object-fit: cover;
+	            height: 200px;
+	        }
+	        .card-title {
+        		padding-left: 10px;
+        	}
+            .card-description {
+        		padding-left: 10px;
+        	}
+        	.card-price{
+        		padding-left: 10px;
+        	}
+			.navbox{
+			    width: 300px; /* Optional: Define a specific width for the box */
+			    width: 100%;
+			    position: sticky;
+			    top: 0;
+			    /*border: 2px solid #333; /* The border creates the "box" outline */
+			    text-align: right;
+			    padding: 10px; /* Space between the border and the navigation content */
+			    background-color: #faedcd; /* Background color for the box */
+			    border-radius: 8px; /* Optional: Rounded corners for a modern look */
+			    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds depth */
+
+			}
+			a{
+		 		margin-left: 10px;
+		 		margin-right: 10px;
+		 		text-decoration: none;     /* removes underline */
+  				color: inherit;            /* keeps the same text color */
+		 	}
+			a:visited {
+			  text-decoration: none;     /* removes underline on visited link */
+			  color: inherit;            /* prevents purple color */
+			}
+			#image-block {
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+			}
+			body{background-color: #dda15e;margin: 0;}
+		</style>
+		<title> Menu </title>
+	</head>
+	<body>	
+		<div class = "navbox">
+			<nav>
+				<a href="main.html" class = "link-hover">Homepage</a>
+				<a href="menu.html" class = "link-hover">Menu</a>
+			</nav>
+		</div>
+		<h1>Menu</h1>
+		<h2>Pizzas</h2>
+		<div id = "pizza-container">
+			<div class = "card">
+				<img class ="card-image" src = "margherita.jpg">
+				<h3 class = "card-title">Margherita</h3>
+				<p class = "card-description">Red sauce, Fresh Mozzarella, Tomatoes, Fresh Basil</p>
+				<p class = "card-price">Price: $19.50</p>
+			</div>
+			<div class = "card">
+				<img class ="card-image" src = "pepperoni.jpg">
+				<h3 class = "card-title">Pepperoni</h3>
+				<p class = "card-description">Red sauce, Fresh Mozzarella, Pepperoni</p>
+				<p class = "card-price">Price: $19.50</p>
+			</div>
+			<div class = "card">
+				<img class ="card-image" src = "meat.jpg">
+				<h3 class = "card-title">Meat Lovers</h3>
+				<p class = "card-description">Red sauce, Fresh Mozzarella, Pepperoni, Italian Sausage, Ham</p>
+				<p class = "card-price">Price: $20.50</p>
+			</div>
+		</div>
+		<h2>Pastas</h2>
+		<div id = "pasta-container">
+			<div class = "card">
+				<img class ="card-image" src = "fettucinne.jpg">
+				<h3 class = "card-title">Fettuccine Alfredo</h3>
+				<p class = "card-description">Silky fettuccine ribbons coated in a luxurious butter-cream sauce, finished with aged Parmesan. Comfort food at its finest.</p>
+				<p class = "card-price">Price: $19.50</p>
+			</div>
+			<div class = "card">
+				<img class ="card-image" src = "spaghetti.jpg">
+				<h3 class = "card-title">Spaghetti and Meatballs</h3>
+				<p class = "card-description">Tender, homemade meatballs simmered in our rich marinara sauce, served over perfectly cooked spaghetti, finished with fresh Parmesan.</p>
+				<p class = "card-price">Price: $18.50</p>
+			</div>
+			<div class = "card">
+				<img class ="card-image" src = "lasagna.jpg">
+				<h3 class = "card-title">Lasagna</h3>
+				<p class = "card-description">Layers of fresh pasta sheets, savory meat ragù, creamy ricotta, mozzarella, and Parmesan cheese, baked until bubbly and golden.</p>
+				<p class = "card-price">Price: $18.50</p>
+			</div>
+		</div>
+
+	</body>
+<html>
