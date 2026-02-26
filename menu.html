@@ -3,6 +3,9 @@
 <html>
 	<head>
 		<style>
+			body{
+				overflow-x: hidden;
+			}
 			background-color: #dda15e;
 			img {
 				height: 200px; 
@@ -154,20 +157,33 @@
 
 
 		<script>
+			var popup = document.getElementById("popup-background");
+			var closeButton = document.getElementById("close-btn");
+			var openButton = document.getElementById("open-btn")
 
-		function addToCart(name, price){
+			openButton.onclick = () => {
+				popup.style.display = "flex";
+				popup.style.justifyContent = "center";
+				popup.style.alignItems = "center";
+			}
 
-		    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+			closeButton.onclick = () => {
+				popup.style.display = "none";
+			}
 
-		    cart.push({
-		        item: name,
-		        price: price
-		    });
+			function addToCart(name, price){
 
-		    localStorage.setItem("cart", JSON.stringify(cart));
+			    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-		    alert(name + " added to cart!");
-		}
+			    cart.push({
+			        item: name,
+			        price: price
+			    });
+
+			    localStorage.setItem("cart", JSON.stringify(cart));
+
+			    alert(name + " added to cart!");
+			}
 
 		</script>
 	</body>
