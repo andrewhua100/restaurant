@@ -43,6 +43,14 @@
         	.card-price{
         		padding-left: 10px;
         	}
+        	.link-hover:hover{
+				background-color: darkgrey;
+				font-size: 100%;
+				margin = 0%;
+				cursor: pointer;
+				padding: 10px;
+			}
+
 			.navbox{
 			    width: 300px; /* Optional: Define a specific width for the box */
 			    width: 100%;
@@ -90,18 +98,27 @@
 				<h3 class = "card-title">Margherita</h3>
 				<p class = "card-description">Red sauce, Fresh Mozzarella, Tomatoes, Fresh Basil</p>
 				<p class = "card-price">Price: $19.50</p>
+				<div style="text-align: center;">
+					<button onclick="addToCart('Margherita',19.50)">Add to Cart</button>
+				</div>
 			</div>
 			<div class = "card">
 				<img class ="card-image" src = "pepperoni.jpg">
 				<h3 class = "card-title">Pepperoni</h3>
 				<p class = "card-description">Red sauce, Fresh Mozzarella, Pepperoni</p>
 				<p class = "card-price">Price: $19.50</p>
+				<div style="text-align: center;">
+					<button onclick="addToCart('Pepperoni',19.50)">Add to Cart</button>
+				</div>
 			</div>
 			<div class = "card">
 				<img class ="card-image" src = "meat.jpg">
 				<h3 class = "card-title">Meat Lovers</h3>
 				<p class = "card-description">Red sauce, Fresh Mozzarella, Pepperoni, Italian Sausage, Ham</p>
 				<p class = "card-price">Price: $20.50</p>
+				<div style="text-align: center;">
+					<button onclick="addToCart('Meat Lovers',20.50)">Add to Cart</button>
+				</div>
 			</div>
 		</div>
 		<h2>Pastas</h2>
@@ -111,20 +128,47 @@
 				<h3 class = "card-title">Fettuccine Alfredo</h3>
 				<p class = "card-description">Silky fettuccine ribbons coated in a luxurious butter-cream sauce, finished with aged Parmesan. Comfort food at its finest.</p>
 				<p class = "card-price">Price: $19.50</p>
+				<div style="text-align: center;">
+					<button onclick="addToCart('Fettuccine Alfredo',19.50)">Add to Cart</button>
+				</div>
 			</div>
 			<div class = "card">
 				<img class ="card-image" src = "spaghetti.jpg">
 				<h3 class = "card-title">Spaghetti and Meatballs</h3>
 				<p class = "card-description">Tender, homemade meatballs simmered in our rich marinara sauce, served over perfectly cooked spaghetti, finished with fresh Parmesan.</p>
 				<p class = "card-price">Price: $18.50</p>
+				<div style="text-align: center;">
+					<button onclick="addToCart('Spaghetti & Meatballs',18.50)">Add to Cart</button>
+				</div>
 			</div>
 			<div class = "card">
 				<img class ="card-image" src = "lasagna.jpg">
 				<h3 class = "card-title">Lasagna</h3>
 				<p class = "card-description">Layers of fresh pasta sheets, savory meat ragù, creamy ricotta, mozzarella, and Parmesan cheese, baked until bubbly and golden.</p>
 				<p class = "card-price">Price: $18.50</p>
+				<div style="text-align: center;">
+					<button onclick="addToCart('Lasagna',18.50)">Add to Cart</button>
+				</div>
 			</div>
 		</div>
 
+
+		<script>
+
+		function addToCart(name, price){
+
+		    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+		    cart.push({
+		        item: name,
+		        price: price
+		    });
+
+		    localStorage.setItem("cart", JSON.stringify(cart));
+
+		    alert(name + " added to cart!");
+		}
+
+		</script>
 	</body>
 <html>
